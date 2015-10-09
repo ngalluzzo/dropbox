@@ -1,0 +1,20 @@
+.card-action {
+  margin:0px;
+  padding:5px !important;
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-action .delete {
+  color:white;
+}
+
+.chunk .determinate {
+  background:orange;
+}
+
+.text-progress {
+  text-align:center;
+  flex:1 auto;
+}

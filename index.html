@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dropbox</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 class="text-center">dropbox</h1>
+    <div class="container">
+      <form class="fileDrop">
+
+        <div class="form-group">
+          <label for="fileName">Nombre de Pelicula</label>
+          <input type="text" name="fileName" class="form-control" id="fileName">
+        </div>
+
+        <div class="form-group">
+          <label for="Archivo">Seleccione su archivo</label>
+          <input type="file" name="file" id="fileMaker">
+        </div>
+        <br>
+        <button class="btn waves-effect waves-light submit" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+    <div class="container cards">
+      <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title truncate">A really long movie title.mp4</span>
+              <div class="card-controls">
+              </div>
+              <div class="main progress">
+                <div class="determinate" style="width: 30%"></div>
+              </div>
+              <div class="chunk progress">
+                <div class="determinate" style="width: 30%"></div>
+              </div>
+            </div>
+            <div class="card-action">
+                <div class="text-progress">
+                  <span class="chip">60%</span>
+                </div>
+              <a class="btn waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
+              <a class="btn waves-effect waves-light red"><i class="material-icons delete">delete</i></a>
+            </div>
+          </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
