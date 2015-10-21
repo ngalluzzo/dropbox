@@ -10,48 +10,112 @@
   </head>
   <body>
     <h1 class="text-center">dropbox</h1>
-    <div class="container">
-      <form class="fileDrop">
-
-        <div class="form-group">
-          <label for="fileName">Nombre de Pelicula</label>
-          <input type="text" name="fileName" class="form-control" id="fileName">
-        </div>
-
-        <div class="form-group">
-          <label for="Archivo">Seleccione su archivo</label>
-          <input type="file" name="file" id="fileMaker">
-        </div>
-        <br>
-        <button class="btn waves-effect waves-light submit" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-        </button>
-      </form>
-    </div>
-    <div class="container cards">
-      <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title truncate">A really long movie title.mp4</span>
-              <div class="card-controls">
+    <div class="nick">
+        <form class="fileDrop">
+          <div class="row">
+            <div class="col s6">
+              <div class="col s6">
+                <div class="form-group">
+                  <div class="input-field">
+                    <input type="text" name="company" value="">
+                    <label for="company">Company</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="email" value="">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="phone" value="">
+                    <label for="phone">Phone</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="address" value="">
+                    <label for="address">Address</label>
+                  </div>
+                </div>
               </div>
-              <div class="main progress">
-                <div class="determinate" style="width: 30%"></div>
+              <div class="col s6">
+                <div class="form-group">
+                  <div class="input-field">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Contact Name</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="showName" value="">
+                    <label for="showName">Name of Show / Movie</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="showEpisodes" value="">
+                    <label for="showEpisodes">Number of Episodes</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="duration" value="">
+                    <label for="duration">Running Time</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="text" name="downloadURL" value="">
+                    <label for="downloadURL">URL to Download (Vimeo or FTP)</label>
+                  </div>
+                </div>
               </div>
-              <div class="chunk progress">
-                <div class="determinate" style="width: 30%"></div>
+              <div class="row">
+                <div class="col s12">
+                  <div class="file-field input-field">
+                    <div class="btn">
+                      <span>Select File</span>
+                      <input type="file" name="file" id="fileMaker">
+                    </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                  </div>
+                </div>
+                <div class="col s12 center-align">
+                  <button class="btn waves-effect waves-light submit" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="card-action">
-                <div class="text-progress">
-                  <span class="chip">60%</span>
-                </div>
-              <a class="btn waves-effect waves-light"><i class="material-icons">play_arrow</i></a>
-              <a class="btn waves-effect waves-light red"><i class="material-icons delete">delete</i></a>
+            <div class="col s6">
+              <ul class="collection">
+              </ul>
+              </div>
+          </div>
+        </form>
+    </div>
+    <script id ="card-template" type="text/x-handlebars-template">
+      <li class="collection-item" id="{{name}}">
+        <div class="row">
+          <div class="col s2">
+            <div class="row">
+              <div class="col s12">
+                <i class="material-icons card-pause">pause</i>
+              </div>
+              <div class="col s12">
+                <i class="material-icons card-delete">delete</i>
+              </div>
             </div>
           </div>
-    </div>
+          <div class="col s10">
+            <div class="row">
+              <div class="col s12 title">
+                <span class="card-title truncate">{{file.name}}</span>
+              </div>
+              <div class="col s12 right-align">
+                <span class="p_progress">{{progress}}%</span>
+              </div>
+              <div class="col s12">
+                <div class="progress"><div class="determinate" style="width: 0%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js"></script>
+    <script src="handlebars.js"></script>
     <script src="app.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,8 +1,16 @@
+.cards {
+  width:400px;
+}
+
+.card-controls {
+  display:flex;
+}
+
 .card-action {
   margin:0px;
   padding:5px !important;
   display:flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -10,11 +18,31 @@
   color:white;
 }
 
-.chunk .determinate {
-  background:orange;
+.determinate {
+  background-color:orange !important;
 }
 
 .text-progress {
   text-align:center;
   flex:1 auto;
+}
+
+.p_progress {
+  flex:1 100%;
+}
+
+.collection .collection-item {
+  padding:15px 0px;
+}
+
+.collection-item i {
+  cursor:pointer;
+}
+
+.collection-item .title span {
+  font-size: 1.4em;
+}
+
+.collection-item .row {
+  margin: 0;
 }
